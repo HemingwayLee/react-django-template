@@ -18,9 +18,10 @@ def insert(request):
 
     return JsonResponse({"result": "created!"})
 
+
 def show(request):
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM person_info;")
+        cursor.execute("SELECT * FROM myapp_person;")
         data = cursor.fetchall()
 
     output = ""
@@ -28,4 +29,3 @@ def show(request):
       output += str(p[0]) + " " + p[1] + " " + p[2] + "<br>"
 
     return JsonResponse({"result": output})
-

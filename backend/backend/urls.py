@@ -18,6 +18,6 @@ from django.urls import path
 from myapp import views
 
 urlpatterns = [
-    path('api/show/', views.show1),
+    path('api/show/', views.show),
     path('api/insert/', views.insert),
 ]

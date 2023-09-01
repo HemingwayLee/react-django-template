@@ -11,6 +11,7 @@ COPY . /home/app/
 RUN npm install -g concurrently
 
 WORKDIR /home/app/frontend/
+RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
 RUN npm install .
 
 WORKDIR /home/app/backend/

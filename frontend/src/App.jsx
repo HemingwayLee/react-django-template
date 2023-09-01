@@ -60,7 +60,6 @@ export default function Dashboard() {
       <Box sx={{ display: 'flex' }}>
         <Drawer variant="permanent">
           <List component="nav">
-            <Button variant="contained" component="label"  onClick={doInsert}>Insert Data</Button>
           </List>
         </Drawer>
         <Box
@@ -84,7 +83,7 @@ export default function Dashboard() {
               </Grid>
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Button variant="contained" component="label" onClick={()=>{alert("!!!!")}}>Alert</Button>
+                  <Button variant="contained" component="label" onClick={doInsert}>Insert Data</Button>
                 </Paper>
               </Grid>
             </Grid>
