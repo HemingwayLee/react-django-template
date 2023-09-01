@@ -44,7 +44,7 @@ export default function Dashboard() {
   }
   
   const showPerson = () => {
-    fetch('/api/show1/', {
+    fetch('/api/show/', {
       method: 'GET',
     })
     .then(function(response) {

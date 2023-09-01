@@ -18,7 +18,7 @@ def insert(request):
 
     return JsonResponse({"result": "created!"})
 
-def show1(request):
+def show(request):
     with connection.cursor() as cursor:
         cursor.execute("SELECT * FROM person_info;")
         data = cursor.fetchall()
@@ -29,16 +29,3 @@ def show1(request):
 
     return JsonResponse({"result": output})
 
-
-def show2(request):
-    with connection.cursor() as cursor:
-        # `person_info` is view, callproc does not work
-        # cursor.callproc("person_info")
-        cursor.callproc("my_func") 
-        data = cursor.fetchall()
-
-    output = ""
-    for p in data:
-        output += str(p[0]) + " " + p[1] + " " + p[2] + "<br>"
-
-    return JsonResponse({"result": output})

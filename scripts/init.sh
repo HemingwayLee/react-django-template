@@ -22,9 +22,6 @@ else
   >&2 echo "Superuser NOT Exist!!! This is fresh install mode"
   cd /home/app/scripts/
   ./create_superuser.sh
-  cd /home/app/backend/sql/
-  PGPASSWORD=${POSTGRES_PASSWORD} psql -h ${POSTGRES_HOST} -p 5432 -U postgres -d ${POSTGRES_DB_NAME} -a -f func.sql
-  PGPASSWORD=${POSTGRES_PASSWORD} psql -h ${POSTGRES_HOST} -p 5432 -U postgres -d ${POSTGRES_DB_NAME} -a -f my_view.sql
 fi
 
 
